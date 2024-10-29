@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.Objects;
+
 public final class Student extends Person {
 	private final int indexNumber;
 
@@ -7,10 +9,16 @@ public final class Student extends Person {
 		super(firstName, lastName, age, hp, personalNumber);
 		this.indexNumber = indexNumber;
 	}
+	
+	public int getIndexNumber() {
+		return indexNumber;
+	}
 
 	@Override
 	public String toString() {
-		return "Student{" + "firstName='" + getFirstName() + '\'' + ", lastName='" + getLastName() + '\'' + ", age=" + getAge() + ", hp=" + getHp() + '}';
+		return "Student{" +
+				"indexNumber=" + indexNumber +
+				'}';
 	}
 
 	@Override
@@ -18,21 +26,17 @@ public final class Student extends Person {
 		if (this == o) {
 			return true;
 		}
-		if (o == null || getClass() != o.getClass()) {
+		if (!(o instanceof final Student student)) {
 			return false;
 		}
 		if (!super.equals(o)) {
 			return false;
 		}
-
-		final Student student = (Student) o;
 		return indexNumber == student.indexNumber;
 	}
 
 	@Override
 	public int hashCode() {
-		int result = super.hashCode();
-		result = 31 * result + indexNumber;
-		return result;
+		return Objects.hash(super.hashCode(), indexNumber);
 	}
 }

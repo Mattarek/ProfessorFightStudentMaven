@@ -10,6 +10,7 @@ public class Person {
 	protected int age;
 	protected int hp;
 	protected PersonalNumber personalNumber;
+	protected String name;
 
 	public Person(final String firstName, final String lastName, final int age, final int hp,
 				  final PersonalNumber personalNumber) {
@@ -17,7 +18,7 @@ public class Person {
 		this.lastName = lastName;
 		this.age = age;
 		this.hp = hp;
-		this.personalNumber = personalNumber; // Używamy przekazanego obiektu bez tworzenia nowego
+		this.personalNumber = personalNumber;
 	}
 
 	public void makeSomeVoice() {
@@ -53,9 +54,11 @@ public class Person {
 		if (this == o) {
 			return true;
 		}
-		if (!(o instanceof final Person person)) {
+
+		if (!(o instanceof final Person person)) { // tutaj inicjalizujemy nasz person, ten widoczny
 			return false;
 		}
+
 		return age == person.age
 				&& hp == person.hp
 				&& Objects.equals(firstName, person.firstName)

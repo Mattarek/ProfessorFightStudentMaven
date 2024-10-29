@@ -27,7 +27,10 @@ public final class Professor extends Person {
 
 	@Override
 	public String toString() {
-		return "Professor{" + "title='" + title + '\'' + '}';
+		return "Professor{" +
+				"professorSpecialization=" + professorSpecialization +
+				", title='" + title + '\'' +
+				'}';
 	}
 
 	@Override
@@ -35,16 +38,17 @@ public final class Professor extends Person {
 		if (this == o) {
 			return true;
 		}
-		if (o == null || getClass() != o.getClass()) {
+		if (!(o instanceof final Professor professor)) {
 			return false;
 		}
-
-		final Professor professor = (Professor) o;
-		return Objects.equals(title, professor.title);
+		if (!super.equals(o)) {
+			return false;
+		}
+		return professorSpecialization == professor.professorSpecialization && Objects.equals(title, professor.title);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hashCode(title);
+		return Objects.hash(super.hashCode(), professorSpecialization, title);
 	}
 }

@@ -26,6 +26,15 @@ public enum ProfessorsSpecialization {
 		this.name = name;
 	}
 
+	public static ProfessorsSpecialization fromString(final String name) {
+		for (final ProfessorsSpecialization specialization : values()) {
+			if (specialization.getName().equalsIgnoreCase(name)) {
+				return specialization;
+			}
+		}
+		throw new IllegalArgumentException("Nieprawidłowa specjalizacja: " + name);
+	}
+
 	public String getName() {
 		return name;
 	}

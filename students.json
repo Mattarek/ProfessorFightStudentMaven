@@ -1,0 +1,11 @@
+{
+  "firstName": "Marcin",
+  "lastName": "Barć",
+  "hp": 100,
+  "personalNumber": "97011310073",
+  "indexNumber": 12321,
+  "age": 27
+}
+{"firstName":"Marcin","lastName":"Barć","hp":100,"personalNumber":"97011310073","indexNumber":12321,"age":28}
+{"firstName":"Mar","lastName":"Bar","hp":100,"personalNumber":"97011310073","indexNumber":12321,"age":27}
+{"firstName":"Ma","lastName":"Ba","hp":100,"personalNumber":"97011310073","indexNumber":32123,"age":28}

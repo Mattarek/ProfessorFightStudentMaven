@@ -1,0 +1,32 @@
+[
+  {
+    "firstName": "Mat",
+    "lastName": "Mar",
+    "hp": 100,
+    "specialization": "PHYSICS",
+    "personalNumber": "97011111111",
+    "title": "NIkt",
+    "age": 28
+  },
+  {
+    "firstName": "test",
+    "lastName": "tes1",
+    "hp": 100,
+    "specialization": "PHYSICS",
+    "personalNumber": "97011311111",
+    "title": "niktt",
+    "age": 28
+  },
+  {
+    "firstName": "Marcin",
+    "lastName": "Bar",
+    "hp": 100,
+    "specialization": "CHEMISTRY",
+    "personalNumber": "97011310073",
+    "title": "Nikt",
+    "age": 49
+  }
+]
+
+
+
